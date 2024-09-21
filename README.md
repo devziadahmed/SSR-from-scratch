@@ -3,14 +3,14 @@
 An experiment of creating React server components from scratch
 
 ```mermaid
-flowchart LR
-    A(React Component Tree) --> B(Server-Side Rendering)
-    B --> C(HTML Sent to Client)
-    C --> D(Initial Render)
-    D --> E(LCP)
-    E --> F(JavaScript Bundle Request)
-    F --> G(JavaScript Bundle Sent)
-    G --> H(Hydration Process)
+graph TD
+    A[React Component Tree] -->|Convert to| B[Server-Side Rendered HTML]
+    B -->|Send to| C[Client]
+    C -->|Render in| D[Browser]
+    D -->|Last Content Paint LCP | E[LCP Event]
+    E -->|Client Requests| F[JavaScript Bundle]
+    F -->|Server Sends| G[JavaScript Bundle]
+    G -->|React App Hydrated| H[Hydrated React App]
 ```
 
 ## Run
