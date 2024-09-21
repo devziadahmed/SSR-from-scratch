@@ -5,7 +5,7 @@ const { renderToString } = require("react-dom/server");
 const React = require("react");
 import Home from "./static";
 
-const htmlTemplate = readFileSync(`${__dirname}/index.html`, "utf-8");
+const htmlTemplate = readFileSync(`${__dirname}/../index.html`, "utf-8");
 const clientJS = readFileSync(`${__dirname}/client.js`, "utf-8");
 
 const server = createServer((req, res) => {
