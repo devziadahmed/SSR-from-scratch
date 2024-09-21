@@ -1,4 +1,4 @@
-import React from "react";
+ReactDOM.hydrateRoot(document.getElementById("root"), <Home />);
 
 const pizzas = [
   {
@@ -23,7 +23,7 @@ const pizzas = [
   },
 ];
 
-export default function Home() {
+function Home() {
   return (
     <div>
       <h1>🍕 Fast React Pizza Co.</h1>
